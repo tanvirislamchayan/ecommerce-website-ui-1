@@ -1,0 +1,149 @@
+.slider-section {
+    /* height: 50vh; */
+    position: relative;
+    overflow: hidden;
+    inset: 0,0,0,0;
+    aspect-ratio: 16/9;
+}
+
+
+
+.left,
+.right {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 50px;
+    backdrop-filter: blur(10px);
+    width: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: white;
+    font-weight: 5090;
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: .3s;
+    z-index: 4;
+}
+
+.left {
+    left: 15px;
+    transform: translateX(-100px);
+}
+.right {
+    right: 15px;
+    transform: translateX(100px);
+
+}
+
+@media (max-width:577.98px) {
+    .slider-section {
+        height: 50vh !important;
+    }
+
+    .left {
+        transform: translateX(0px);
+    }
+    .right {
+        transform: translateX(0px);
+    
+    }
+}
+
+.left:hover, .right:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.slider-section:hover .left, .slider-section:hover .right {
+    transform: translateX(0px);
+}
+
+
+.images {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: 1s;
+    /* overflow-x: auto;  */
+    /* overflow: hidden; */
+    display: flex;
+    /* z-index: -1; */
+}
+
+.images .img {
+    flex: 0 0 100%; /* Takes full width of the parent */
+    height: 100%;
+    position: relative;
+}
+
+.images .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img a{
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 0px 0px 10px #0005;
+    
+}
+
+.img a button {
+    background-color: #ff6b2c;
+    box-shadow: 2px -2px 5px #0005;
+}
+
+.img-info h1 {
+    border-bottom: 1px solid #fff5;
+}
+
+.img-info p {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.img-info button {
+    background-color: #ff6b2c;
+    border:2px solid #ff6b2c;
+    color: whtie ;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: .3rem;
+    box-shadow: 0px 0px 10px #ff6b2c;
+    transition: .5s;
+
+}
+
+.img-info button:hover {
+    background-color: #fff;
+    border:2px solid #fff;
+    color: #ff6b2c ;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: .3rem;
+    box-shadow: 0px 0px 10px #fff;
+    transition: .5s;
+}
+
+.bottom {
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+    gap: 10px;
+}
+
+.bottom .dot-button {
+    height: 10px;
+    width: 20px;
+    border-radius: 50px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px #0005;
+    cursor: pointer;
+}

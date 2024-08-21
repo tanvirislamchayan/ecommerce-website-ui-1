@@ -1,0 +1,125 @@
+/* navigation */
+
+.navigation-section {
+    padding: 20px 10px;
+    position: fixed !important;
+    z-index: 1000;
+    background-color: rgba(254, 110, 48, 0.5);
+    top: 0;
+    transition: .3s;
+    gap: 1rem;
+    width: 100%;
+}
+
+.navigation-section.sticky {
+    padding: 5px 10px !important;
+    box-shadow: 0px 2px 10px #0005 !important;
+    background-color: rgb(254, 110, 48);
+}
+
+.menu.stick {
+    padding: 2px 30px !important;
+}
+
+.navigation-section .logo {
+    flex-basis: 30%;
+    transition: .3s;
+}
+
+.navigation-section .main-menu {
+    flex-basis: 70%;
+}
+
+.navigation-section .main-menu .menu {
+    gap: 20px;
+    width: 100%;
+    padding: 5px 30px;
+}
+
+.navigation-section .main-menu .menu div {
+    text-shadow: 0px 0px 8px #0005;
+    transition: .3s;
+    padding: 2px 5px;
+    border-radius: .3rem;
+}
+
+.navigation-section .main-menu .menu div a {
+    color: #fff;
+}
+
+.navigation-section .main-menu .menu div:hover {
+    background-color: rgb(247, 77, 4);
+}
+
+.navigation-section .main-menu .menu .div-active {
+    background-color: rgb(247, 77, 4);
+}
+
+.navigation-section .main-menu .search-section {
+    width: 100%;
+    gap: 10px;
+}
+
+.search-section .category-div {
+    flex: .3;
+    border: 1px solid #fff;
+    border-radius: 30rem;
+    padding: 10px 20px;
+}
+
+.search-section .category-div div {
+    display: flex;
+    width: 100%;
+    border-radius: .6rem;
+}
+
+.search-section .category-div div select {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 8px #0005;
+}
+
+.search-section .category-div div select option {
+    color: #000;
+}
+
+.search-div {
+    flex: .7;
+    border: 1px solid #fff;
+    border-radius: 30rem;
+}
+
+.search-div form {
+    display: flex;
+    padding: 3px 20px;
+}
+
+.search-div form input {
+    flex: 1 !important;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.search-div form button {
+    aspect-ratio: 1/1;
+    background: transparent;
+    color: black;
+    box-shadow: none;
+    font-size: 1.5rem;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.navigation-section .bars {
+    display: none;
+}
+
