@@ -20,10 +20,10 @@
             <img src="../img/logo.png" height="60px" alt="">
         </div>
         <div class="main-menu d-flex justify-content-center align-items-center flex-column">
-            <div id="menu" class="menu d-flex justify-content-end align-items-center">
-                <div class="d-none">
+            <div  class="menu d-flex justify-content-end align-items-center">
+                <!-- <div id="nav-cls" class="">
                     <i class="fa-solid fa-bars"></i>
-                </div>
+                </div> -->
                 <div class="div-active">
                     <a href="#">Home</a>
                 </div>
@@ -66,11 +66,47 @@
             </div> <!--end search and category-->
         </div> <!--end main menu-->
 
-        <div class="bars justify-content-end">
-            <div class="search-icon">
+        <div id="nav-bar" class="main-bar ">
+            <div id="menu" class="menu d-flex justify-content-end align-items-start flex-column ">
+                <div id="nav-cls" class="nav-cls" >
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="div-active">
+                    <a href="#">Home</a>
+                </div>
+                <div>
+                    <a href="#">Products</a>
+                </div>
+                <div>
+                    <a href="#">Become a Seller</a>
+                </div>
+                <div>
+                    <a href="#">Help and Support</a>
+                </div>
+                <div>
+                    <a href="#">Login | Signup</a>
+                </div>
+            </div> <!--end menu-->
+
+            
+        </div> <!--end main menu-->
+
+        <div id="nav-search" class="nav-search d-flex align-items-center justify-content-center">
+            <div class="search-div">
+                <form>
+                    <input type="search" name="search" placeholder="Search with Product, Description, Category..." id="search">
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div> <!--end search-->
+        </div>
+
+        <div class="bars d-flex justify-content-end align-items-center" >
+            <div id="search-icon" class="search-icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <div id="nav-open" class="bar-icon">
+            <div id="nav-open" class="nav-open bar-icon">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div> <!--end bars-->

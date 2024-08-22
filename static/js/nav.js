@@ -7,19 +7,46 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.classList.toggle('stick', window.scrollY > 0);
     });
 
+    
+
+    
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
     const navOpen = document.getElementById('nav-open');
+    const navCls = document.getElementById('nav-cls');
+    const navBar = document.getElementById('nav-bar');
+    const navSearchIcon = document.getElementById('search-icon');
+    const navBarOpen = document.getElementById('nav-search');
 
     if (navOpen) {
         navOpen.addEventListener('click', () => {
-            menu.classList.toggle('show-menu');
+            navBar.classList.add('nav-open-slide');
         });
     }
 
-    const menuOverlay = document.querySelector('.menu-overlay');
+    if (navCls) {
+        navCls.addEventListener('click', () => {
+            navBar.classList.remove('nav-open-slide');
+        });
+    }
 
-    if (menuOverlay) {
-        menuOverlay.addEventListener('click', () => {
-            menu.classList.remove('show-menu');
+    if (navSearchIcon) {
+        navSearchIcon.addEventListener('click', () => {
+            console.log('clicked');
+            navBarOpen.classList.toggle('search-open-slide');
+
+            // Toggle the icon
+            const icon = navSearchIcon.querySelector('i');
+            if (icon.classList.contains('fa-magnifying-glass')) {
+                icon.classList.remove('fa-magnifying-glass');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-magnifying-glass');
+            }
         });
     }
 });
+

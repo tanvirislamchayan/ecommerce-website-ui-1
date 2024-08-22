@@ -1,5 +1,4 @@
-/* navigation */
-
+/* Navigation Section Styles */
 .navigation-section {
     padding: 20px 10px;
     position: fixed !important;
@@ -12,7 +11,7 @@
 }
 
 .navigation-section.sticky {
-    padding: 5px 10px !important;
+    padding: 5px 20px !important;
     box-shadow: 0px 2px 10px #0005 !important;
     background-color: rgb(254, 110, 48);
 }
@@ -36,26 +35,26 @@
     padding: 5px 30px;
 }
 
-.navigation-section .main-menu .menu div {
+.menu div {
     text-shadow: 0px 0px 8px #0005;
     transition: .3s;
     padding: 2px 5px;
     border-radius: .3rem;
 }
 
-.navigation-section .main-menu .menu div a {
+.menu div a {
     color: #fff;
 }
 
-.navigation-section .main-menu .menu div:hover {
+.menu div:hover {
     background-color: rgb(247, 77, 4);
 }
 
-.navigation-section .main-menu .menu .div-active {
+.menu .div-active {
     background-color: rgb(247, 77, 4);
 }
 
-.navigation-section .main-menu .search-section {
+.search-section {
     width: 100%;
     gap: 10px;
 }
@@ -116,10 +115,152 @@
     box-shadow: none;
     font-size: 1.5rem;
     padding: 0;
-    font-size: 1.5rem;
 }
 
-.navigation-section .bars {
-    display: none;
+.bars {
+    display: none !important;
+    gap: 10px;
+    position:absolute;
+    right: 10px !important;
+}
+
+.bars div {
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-open {
+    border-radius: .3rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #0005;
+}
+
+.main-bar {
+    /* display: none; */
+    padding: 70px 10px 10px 10px !important;
+    gap: 5px;
+    position: fixed !important;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: rgb(254, 110, 48); /* Example background */
+    box-shadow: -2px 0px 10px #0005;
+    z-index: 999; /* Ensure it's on top */
+    transform: translateX(300px);
+    transition: .3s;
+}
+
+.nav-cls {
+    background-color: #fff !important;
+    position: absolute !important;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: .3rem;
+    box-shadow: 0px 0px 10px #0005;
+}
+
+#nav-bar.nav-open-slide {
+    transform: translateX(0px);
+}
+
+.nav-search {
+    height: 100px;
+    background-color: rgb(247, 77, 4);
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    transform: translateY(-300px); /* Initial hidden position */
+    transition: transform .3s ease-in-out; /* Smooth transition */
+}
+
+.nav-search.search-open-slide {
+    transform: translateY(0px); /* Slide into view */
+}
+
+
+
+
+
+/* Extra small devices (phones, up to 600px) */
+@media (min-width: 0px) and (max-width: 600px) {
+    .main-menu {
+        display: none !important;
+    }
+
+    .bars {
+        display: flex !important;
+    }
+
+    .bars div {
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .nav-bar {
+        /* Additional styles can go here */
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px to 767.98px) */
+@media (min-width: 600px) and (max-width: 767.98px) {
+    .main-menu {
+        display: none !important;
+    }
+
+    .bars {
+        display: flex !important;
+    }
+
+    .nav-bar {
+        /* Additional styles can go here */
+    }
+}
+
+/* Medium devices (landscape tablets, 768px to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .main-menu {
+        display: none !important;
+    }
+
+    .bars {
+        display: flex !important;
+    }
+
+    .nav-bar {
+        /* Additional styles can go here */
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Add styles specific to large devices if needed */
+    /* Example:
+       .some-class {
+           display: block;
+       }
+    */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* Add styles specific to extra large devices if needed */
+    /* Example:
+       .some-class {
+           display: block;
+       }
+    */
 }
 
